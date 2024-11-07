@@ -1,24 +1,20 @@
-// src/components/SignaturePad.js
 import React, { useRef } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
 
 const SignaturePad = () => {
   const sigCanvas = useRef(null);
 
-  // Function to clear the signature
   const clearSignature = () => {
     sigCanvas.current.clear();
   };
 
-  // Function to save the signature as an image file on the user's device
   const saveSignature = () => {
     if (!sigCanvas.current.isEmpty()) {
-      const signatureDataUrl = sigCanvas.current.toDataURL("image/png"); // Convert signature to Data URL
+      const signatureDataUrl = sigCanvas.current.toDataURL("image/png");
       
-      // Create an anchor element to trigger the download
       const downloadLink = document.createElement("a");
       downloadLink.href = signatureDataUrl;
-      downloadLink.download = "signature.png"; // Set the default file name for the download
+      downloadLink.download = "signature.png";
       downloadLink.click();
     } else {
       console.log("Signature pad is empty.");
