@@ -39,7 +39,7 @@ const SignaturePad = () => {
           onClick={clearSignature}
           className="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-600"
         >
-          
+          Clear
         </button>
         <button
           onClick={saveSignature}
