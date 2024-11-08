@@ -10,7 +10,7 @@ const SignaturePad = () => {
 
   const saveSignature = () => {
     if (!sigCanvas.current.isEmpty()) {
-      const signatureDataUrl = sigCanvas.current.toDataURL("image/png");
+      const signatureDataUrl = sigCanvas.current.toDataURL("image/jpeg");
       
       const downloadLink = document.createElement("a");
       downloadLink.href = signatureDataUrl;
