@@ -24,7 +24,7 @@ const SignaturePad = () => {
   return (
     <div className="flex flex-col items-center p-6 bg-gray-100 rounded-lg shadow-md w-full max-w-md mx-auto mt-10">
       <h2 className="text-2xl font-semibold text-gray-700 mb-4">Signature Pad</h2>
-      <div className="border-2 border-gray-300 bg-white rounded-md mb-4 w-full h-64">
+      <div className="border-2 border-black bg-gray-300 rounded-md mb-4 w-full h-64">
         <SignatureCanvas
           ref={sigCanvas}
           penColor="white"
