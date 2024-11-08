@@ -14,7 +14,7 @@ const SignaturePad = () => {
       
       const downloadLink = document.createElement("a");
       downloadLink.href = signatureDataUrl;
-      downloadLink.download = "signature.png";
+      downloadLink.download = "signature.jpeg";
       downloadLink.click();
     } else {
       console.log("Signature pad is empty.");
