@@ -10,11 +10,11 @@ const SignaturePad = () => {
 
   const saveSignature = () => {
     if (!sigCanvas.current.isEmpty()) {
-      const signatureDataUrl = sigCanvas.current.toDataURL("image/jpeg");
+      const signatureDataUrl = sigCanvas.current.toDataURL("image/png");
       
       const downloadLink = document.createElement("a");
       downloadLink.href = signatureDataUrl;
-      downloadLink.download = "signature.jpeg";
+      downloadLink.download = "signature.png";
       downloadLink.click();
     } else {
       console.log("Signature pad is empty.");
@@ -27,7 +27,7 @@ const SignaturePad = () => {
       <div className="border-2 border-gray-300 bg-white rounded-md mb-4 w-full h-64">
         <SignatureCanvas
           ref={sigCanvas}
-          penColor="black"
+          penColor="white"
           canvasProps={{
             className: "w-full h-full rounded-md",
           }}
